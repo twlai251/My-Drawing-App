@@ -3,6 +3,8 @@ package com.example.drawingapp
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.util.Size
+import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
 
@@ -91,7 +93,19 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
 
     }
 
-    inner class CustomPath(var color: Int, var brushThickness: Float): Path()
+    fun setSizeForBrush(newSize: Float){
+        mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newSize, resources.displayMetrics)
+
+        mDrawPaint?.strokeWidth = mBrushSize
+
+    }
+
+    fun setColor(newColor: String){
+        mBrushColor = Color.parseColor(newColor)
+        mDrawPaint?.color = mBrushColor
+    }
+
+    internal inner class CustomPath(var color: Int, var brushThickness: Float): Path()
 
 
 }
