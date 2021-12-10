@@ -6,7 +6,7 @@ The user can select different colors on a color panel as well as a selection of 
 The app allows importing and exporting images with android permissions.
 
 
-![Drawing App Demo](https://github.com/twlai251/Pygame-Tic-Tac-Toe/blob/main/img/tictactoe.gif)
+![Drawing App Demo](https://github.com/twlai251/My-Drawing-App/blob/main/drawing_app.gif)
  
 
 ## Canvas Background Change
